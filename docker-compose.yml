@@ -1,0 +1,13 @@
+version: "3"
+services:
+  db:
+    image: mariadb
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: todo
+      MYSQL_USER: todo_user
+      MYSQL_PASSWORD: todo_pass
+    container_name: todo_db
+    ports:
+      - 3303:3306
